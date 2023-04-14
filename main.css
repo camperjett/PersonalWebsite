@@ -3,6 +3,7 @@
 * {
   margin: 0;
   padding: 0;
+  /* exact dimensions (margin, padding etc included) */
   box-sizing: border-box;
   font-family: 'Roboto', sans-serif;
 }
@@ -20,29 +21,27 @@ a:hover {
   position: fixed;
   top: 3%;
   left: 50%;
-  -webkit-transform: translate(-50%, 0);
   transform: translate(-50%, -50%);
   background-color: #333;
   z-index: 5;
   opacity: 0.4;
   width: 100%;
+
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  padding: 10px 50px;
   align-items: center;
+
+  padding: 10px 50px;
 }
 
 .navbar--inline a {
   color: #f6f4e6;
   text-decoration: none;
   font-size: 1.2em;
-  /* text-transform: uppercase; */
   font-weight: 500;
   display: inline-block;
-  padding: auto;
   margin: 0px 5px;
-  width: auto;
   opacity: 0.8;
   display: flex;
 }
@@ -104,10 +103,8 @@ a:hover {
 }
 
 .blur {
-
   /* Add the blur effect */
-  filter: blur(8px);
-  -webkit-filter: blur(8px);
+  filter: blur(0.2rem);
 }
 
 .location-label {
@@ -147,16 +144,12 @@ a:hover {
 .circular--portrait img {
   width: 100%;
   height: auto;
-  margin-top: -100px;
-  transform: scale(1.25);
-  -ms-transform: scale(1.25);
-  /* IE 9 */
-  -moz-transform: scale(1.25);
-  /* Firefox */
-  -webkit-transform: scale(1.25);
-  /* Safari and Chrome */
-  -o-transform: scale(1.25);
-  /* Opera */
+  /* margin-top: -100px; */
+  /* transform: scale(1); */
+}
+
+.landing-content {
+  opacity: 0.9;
 }
 
 .c-landing h1 {
@@ -177,9 +170,9 @@ a:hover {
 }
 
 .icon {
-  opacity: .4;
+  opacity: 0.6;
   color: #fff;
-  margin-right: 5px;
+  margin: 5px;
 }
 
 .icon:hover {
@@ -236,10 +229,12 @@ a:hover {
   text-align: center;
   background-image: url("./img/bg-IITBHU.jpg");
   padding: 50px;
+  
   /* Center and scale the image nicely */
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+  background-attachment: fixed;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
